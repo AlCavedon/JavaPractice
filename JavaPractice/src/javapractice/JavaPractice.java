@@ -19,6 +19,7 @@ public class JavaPractice {
     public static void main(String[] args) {
         boolean cont = true;
         while (cont) {
+            System.out.println("\n\n");
             System.out.println("Input function that you want to run: ");
             System.out.println("1 - Hello World");
             System.out.println("2 - Replace");
@@ -57,7 +58,7 @@ public class JavaPractice {
     }   //main()
 
     private static void HelloWorld() {
-        System.out.println("Hello World!");
+        System.out.println("\nHello World!");
     }
 
     private static void Replace() {
@@ -68,7 +69,7 @@ public class JavaPractice {
         second = first;
         first = third;
         
-        System.out.println("first=" + first + " second=" + second);
+        System.out.println("\nfirst=" + first + " second=" + second);
     }
 
     private static void Temperature() {
@@ -76,20 +77,7 @@ public class JavaPractice {
         Scanner sc = new Scanner(System.in);
         double celsius = sc.nextDouble();
         double fahrenheit = 9.0 / 5.0 * celsius + 32.0;
-        System.out.println("Fahrenheit: "+fahrenheit);
-    }
-
-    private static void Boiling() {
-        System.out.println("Input the temperature: ");
-        Scanner sc = new Scanner(System.in);
-        int temp = sc.nextInt();
-        if (temp >= 100) {
-            System.out.println("The water is boiling.");
-        } else if (temp <=0) {
-            System.out.println("The water is freezing.");
-        } else {
-            System.out.println("The water is liquid.");
-        }
+        System.out.println("\nFahrenheit: "+fahrenheit);
     }
 
     private static void BoilingFreezing() {
@@ -97,9 +85,22 @@ public class JavaPractice {
         Scanner sc = new Scanner(System.in);
         int temp = sc.nextInt();
         if (temp >= 100) {
-            System.out.println("The water is boiling.");
+            System.out.println("\nThe water is boiling.");
+        } else if (temp <=0) {
+            System.out.println("\nThe water is freezing.");
         } else {
-            System.out.println("The water is not boiling");
+            System.out.println("\nThe water is liquid.");
+        }
+    }
+
+    private static void Boiling() {
+        System.out.println("Input the temperature: ");
+        Scanner sc = new Scanner(System.in);
+        int temp = sc.nextInt();
+        if (temp >= 100) {
+            System.out.println("\nThe water is boiling.");
+        } else {
+            System.out.println("\nThe water is not boiling");
         }
     }
     
