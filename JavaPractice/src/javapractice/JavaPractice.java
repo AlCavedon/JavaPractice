@@ -26,6 +26,7 @@ public class JavaPractice {
             System.out.println("3 - Temperature");
             System.out.println("4 - Boiling");
             System.out.println("5 - Boiling and Freezing");
+            System.out.println("6 - Area");
             System.out.println("0 - quit");
             System.out.println("Choice: ");
             Scanner sc = new Scanner(System.in);
@@ -49,6 +50,9 @@ public class JavaPractice {
                     break;
                 case 5: 
                     BoilingFreezing(); 
+                    break;
+                case 6:
+                    Area();
                     break;
                 default:
                     System.out.println("ERROR: bad input... try again.");
@@ -103,5 +107,21 @@ public class JavaPractice {
             System.out.println("\nThe water is not boiling");
         }
     }
+
+    private static void Area() {
+        // find the area of a circle and a rectangle, return one with larger area
+        Shape s1 = new Circle(5.0);
+        Shape s2 = new Rectangle(5.0, 4.0);
+        
+        Shape larger = getLargerShape(s1, s2);
+        
+        System.out.println("The area of the larger shape is: " + larger.area());
+    }
     
+    public static Shape getLargerShape(Shape s1, Shape s2) {
+        if (s1.area() > s2.area())
+            return s1; 
+        else 
+            return s2;
+    }
 }
